@@ -24,6 +24,13 @@ public class ResourceManager : MonoBehaviour
     public bool generatingBlue = false;
     public bool generatingGreen = false;
 
+    // =============================
+    // PARTICLES
+    // =============================
+    public ParticleSystem redParticles;
+    public ParticleSystem blueParticles;
+    public ParticleSystem greenParticles;
+
     void Update()
     {
         if (Keyboard.current != null && Keyboard.current.pKey.wasPressedThisFrame)
@@ -32,14 +39,65 @@ public class ResourceManager : MonoBehaviour
             Debug.Log("Add red liquid: " + redLiquid);
         }
 
+        // Red generation
         if (generatingRed)
+        {
             redLiquid += redRate * Time.deltaTime;
 
+            if (redParticles != null)
+            {
+                var emission = redParticles.emission;
+                emission.rateOverTime = redRate * 2f;
+
+                if (!redParticles.isPlaying)
+                    redParticles.Play();
+            }
+        }
+        else
+        {
+            if (redParticles != null && redParticles.isPlaying)
+                redParticles.Stop();
+        }
+
+        // Blue generation
         if (generatingBlue)
+        {
             blueLiquid += blueRate * Time.deltaTime;
 
+            if (blueParticles != null)
+            {
+                var emission = blueParticles.emission;
+                emission.rateOverTime = blueRate * 2f;
+
+                if (!blueParticles.isPlaying)
+                    blueParticles.Play();
+            }
+        }
+        else
+        {
+            if (blueParticles != null && blueParticles.isPlaying)
+                blueParticles.Stop();
+        }
+
+        // Green generation
         if (generatingGreen)
+        {
             greenLiquid += greenRate * Time.deltaTime;
+
+            if (greenParticles != null)
+            {
+                var emission = greenParticles.emission;
+                emission.rateOverTime = greenRate * 2f;
+
+                if (!greenParticles.isPlaying)
+                    greenParticles.Play();
+            }
+        }
+        else
+        {
+            if (greenParticles != null && greenParticles.isPlaying)
+                greenParticles.Stop();
+        }
 
         // Cap all resources at 150
         redLiquid = Mathf.Min(redLiquid, 150f);
@@ -60,12 +118,14 @@ public class ResourceManager : MonoBehaviour
     {
         generatingBlue = true;
         if (blueRate == 0) blueRate = 10f;
+        Debug.Log("Blue generation started");
     }
 
     public void StartGreenGeneration()
     {
         generatingGreen = true;
         if (greenRate == 0) greenRate = 10f;
+        Debug.Log("Green generation started");
     }
 
     // =============================
