@@ -1198,6 +1198,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 1779430929355781141, guid: 18149c0948650394fa31938980e84e71, type: 3}
   spawnPoint: {fileID: 863325971}
   textDisplay: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!1001 &101045107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17229,6 +17230,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 98236481}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1001 &868474941
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.986829
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8908873
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12255269
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755855717322859988, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563459568915873646, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
+      propertyPath: m_Name
+      value: Surveillance Camera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eed54a613be71b543a99e53a8e2914de, type: 3}
 --- !u!1001 &869345418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17778,6 +17836,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 8227029571573059388, guid: 8757a305f86779f4fa54c5fbc2029b17, type: 3}
   spawnPoint: {fileID: 1211066034}
   textDisplay: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!65 &908623579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23961,6 +24020,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 5043811912971204643, guid: 73b2699feabeaf04395121b1baead0ec, type: 3}
   spawnPoint: {fileID: 1129401152}
   textDisplay: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!1001 &1033242231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30733,6 +30793,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 1779430929355781141, guid: 18149c0948650394fa31938980e84e71, type: 3}
   spawnPoint: {fileID: 2006686443}
   textDisplay: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!65 &1144153653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32712,6 +32773,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 8227029571573059388, guid: 8757a305f86779f4fa54c5fbc2029b17, type: 3}
   spawnPoint: {fileID: 1159106120}
   textDisplay: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!1001 &1277919910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35567,6 +35629,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 5043811912971204643, guid: 73b2699feabeaf04395121b1baead0ec, type: 3}
   spawnPoint: {fileID: 1665382219}
   textDisplay: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!65 &1478222857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45282,3 +45345,4 @@ SceneRoots:
   - {fileID: 1038130813}
   - {fileID: 975543755}
   - {fileID: 727587820}
+  - {fileID: 868474941}

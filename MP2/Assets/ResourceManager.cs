@@ -1,8 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ResourceManager : MonoBehaviour
 {
+
+    public Animator cameraAnimator;
     // =============================
     // LIQUID AMOUNTS
     // =============================
@@ -30,6 +32,10 @@ public class ResourceManager : MonoBehaviour
     public ParticleSystem redParticles;
     public ParticleSystem blueParticles;
     public ParticleSystem greenParticles;
+
+
+
+
 
     void Update()
     {
@@ -112,6 +118,8 @@ public class ResourceManager : MonoBehaviour
     {
         generatingRed = true;
         Debug.Log("Red generation started");
+
+        UpdateCameraAnimation();
     }
 
     public void StartBlueGeneration()
@@ -119,6 +127,8 @@ public class ResourceManager : MonoBehaviour
         generatingBlue = true;
         if (blueRate == 0) blueRate = 10f;
         Debug.Log("Blue generation started");
+
+        UpdateCameraAnimation();
     }
 
     public void StartGreenGeneration()
@@ -126,6 +136,28 @@ public class ResourceManager : MonoBehaviour
         generatingGreen = true;
         if (greenRate == 0) greenRate = 10f;
         Debug.Log("Green generation started");
+
+        UpdateCameraAnimation();
+    }
+
+    public void UpdateCameraAnimation()
+    {
+        if (cameraAnimator == null) return;
+
+        int activeCount = 0;
+
+        if (generatingRed) activeCount++;
+        if (generatingBlue) activeCount++;
+        if (generatingGreen) activeCount++;
+
+        // This will send 1, 2, or 3 to the Animator based on how many plates are pressed
+        cameraAnimator.SetInteger("GenLevel", activeCount);
+
+        // FIX 2: This will tell us if the math is actually working
+        Debug.Log("⚙️ Attempting to set GenLevel Animator parameter to: " + activeCount);
+
+        // FIX 3: Applies the integer to the Animator
+        cameraAnimator.SetInteger("GenLevel", activeCount);
     }
 
     // =============================
@@ -172,4 +204,6 @@ public class ResourceManager : MonoBehaviour
         blueLiquid -= blueCost;
         greenLiquid -= greenCost;
     }
+
+
 }
