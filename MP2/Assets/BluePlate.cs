@@ -7,6 +7,7 @@ public class BluePlate : MonoBehaviour
     public GameObject prefabToSpawn;
     public Transform spawnPoint;
     public TextMeshPro textDisplay;
+    public AudioSource unlockSound;
 
     private bool activated = false;
 
@@ -23,6 +24,9 @@ public class BluePlate : MonoBehaviour
 
             SpawnObject();
             activated = true;
+
+            if (unlockSound != null)
+                unlockSound.Play();
 
             if (textDisplay != null)
                 textDisplay.text = "Blue Generator Activated!";

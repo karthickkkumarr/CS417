@@ -7,6 +7,7 @@ public class RedPlate : MonoBehaviour
     public GameObject prefabToSpawn;
     public Transform spawnPoint;
     public TextMeshPro textDisplay;
+    public AudioSource unlockSound;
 
     private bool activated = false;
 
@@ -24,6 +25,9 @@ public class RedPlate : MonoBehaviour
 
             SpawnObject();
             activated = true;
+
+            if (unlockSound != null)
+                unlockSound.Play();
 
             if (textDisplay != null)
                 textDisplay.text = "Red Generator Activated!";

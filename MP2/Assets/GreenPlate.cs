@@ -7,6 +7,7 @@ public class GreenPlate : MonoBehaviour
     public GameObject prefabToSpawn;
     public Transform spawnPoint;
     public TextMeshPro textDisplay;
+    public AudioSource unlockSound;
 
     private bool activated = false;
 
@@ -23,6 +24,9 @@ public class GreenPlate : MonoBehaviour
 
             SpawnObject();
             activated = true;
+
+            if (unlockSound != null)
+                unlockSound.Play();
 
             if (textDisplay != null)
                 textDisplay.text = "Green Generator Activated!";
