@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics; // NEW: XRI 3.0 Haptics namespace
 
 /// <summary>
 /// Attach to a plate in the scene for each generator (red, blue, green).
@@ -18,6 +19,13 @@ public class PowerUpPlate : MonoBehaviour
     public LiquidType liquidType;
     public float cost = 50f;
     public float multiplier = 3f;
+
+    // NEW: XRI 3.0 Haptic Settings
+    [Header("Haptic Feedback")]
+    public HapticsUtility.Controller targetHand = HapticsUtility.Controller.Right; // Dropdown menu!
+    [Range(0f, 1f)]
+    public float hapticAmplitude = 0.5f;
+    public float hapticDuration = 0.2f;
 
     private bool purchased = false;
 
@@ -55,6 +63,9 @@ public class PowerUpPlate : MonoBehaviour
         SpendLiquid();
         ApplyMultiplier();
         purchased = true;
+
+        // NEW: Trigger the XRI 3.0 haptic feedback globally!
+        HapticsUtility.SendHapticImpulse(hapticAmplitude, hapticDuration, targetHand);
 
         if (textDisplay != null)
             textDisplay.text = liquidType.ToString() + " Power-Up Activated!\n+" + ((multiplier - 1f) * 100f) + "% rate";

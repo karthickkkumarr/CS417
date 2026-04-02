@@ -17,9 +17,9 @@ public class RedPlate : MonoBehaviour
         if (activated) return;
         if (resourceManager == null) return;
 
-        if (resourceManager.CanAfford(5f, 0f, 0f))
+        if (resourceManager.CanAfford(0f, 0f, 0f))
         {
-            resourceManager.SpendMultiple(5f, 0f, 0f);
+            resourceManager.SpendMultiple(0f, 0f, 0f);
             resourceManager.StartRedGeneration();
 
             SpawnObject();
@@ -31,7 +31,7 @@ public class RedPlate : MonoBehaviour
         else
         {
             if (textDisplay != null)
-                textDisplay.text = "Need 10 Red Liquid";
+                textDisplay.text = "Need 0 Red Liquid";
         }
     }
 

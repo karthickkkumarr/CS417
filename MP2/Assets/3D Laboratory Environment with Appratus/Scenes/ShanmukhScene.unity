@@ -6034,7 +6034,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Red Liquid Generator
 
-    Cost: 5 Red Liquid'
+    Cost: 0 Red Liquid'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17885,11 +17885,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567b17a0a1d1a6946b81788a786596c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpPlate
-  resourceManager: {fileID: 0}
+  resourceManager: {fileID: 1974493603}
   textDisplay: {fileID: 0}
-  liquidType: 0
+  liquidType: 1
   cost: 50
   multiplier: 1.5
+  targetHand: 2
+  hapticAmplitude: 0.5
+  hapticDuration: 0.2
 --- !u!1001 &913235408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30837,11 +30840,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567b17a0a1d1a6946b81788a786596c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpPlate
-  resourceManager: {fileID: 0}
+  resourceManager: {fileID: 1974493603}
   textDisplay: {fileID: 0}
   liquidType: 0
   cost: 50
   multiplier: 1.5
+  targetHand: 2
+  hapticAmplitude: 0.5
+  hapticDuration: 0.2
 --- !u!1001 &1155367917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35668,11 +35674,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567b17a0a1d1a6946b81788a786596c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpPlate
-  resourceManager: {fileID: 0}
+  resourceManager: {fileID: 1974493603}
   textDisplay: {fileID: 0}
-  liquidType: 0
+  liquidType: 2
   cost: 50
   multiplier: 1.5
+  targetHand: 2
+  hapticAmplitude: 0.5
+  hapticDuration: 0.2
 --- !u!1 &1478909786
 GameObject:
   m_ObjectHideFlags: 0
